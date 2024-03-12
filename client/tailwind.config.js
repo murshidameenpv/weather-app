@@ -6,8 +6,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        yellow: "#eda415",
-        navblue: "#003f62",
+        black: "#141216",
+        gray: "#1D1B1F",
+        darkGray: "#1a181c",
       },
       fontFamily: {
         inconsolata: ["Inconsolata", "monospace"],
