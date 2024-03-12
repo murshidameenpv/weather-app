@@ -2,38 +2,46 @@ import { useState } from "react";
 import { FaLocationCrosshairs } from "react-icons/fa6";
 import { FaSearch, FaArrowLeft } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
-
+import { MdDarkMode } from "react-icons/md";
+import { MdLightMode } from "react-icons/md";
+import { useDarkMode } from "../hooks/useDarkMode";
 const TopBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
-
+  const { darkMode, toggleTheme } = useDarkMode();
   const previousSearches = ["New York", "London", "Tokyo"];
 
   return (
-    <div className="navbar bg-black">
+    <div className="navbar bg-light dark:bg-black">
       <div className="navbar-start">
-        <a className="text-xl">Weather.IO</a>
+        <a className="text-xl text-gray dark:text-zinc-600">Weather.IO</a>
       </div>
       <div className="form-control sm:block hidden">
         <input
           type="text"
           placeholder="Search City"
-          className="input input-bordered w-40 h-8 md:w-auto "
+          className="input input-bordered w-40 h-8 md:w-auto bg-light dark:bg-gray"
         />
       </div>
       <div className="navbar-end">
         <button
-          className="sm:hidden btn rounded-full"
+          className="sm:hidden btn rounded-full mx-2 bg-light dark:bg-gray"
           onClick={() => setIsOpen(!isOpen)}
         >
           <FaSearch />
         </button>
-        <button className="btn rounded-full hover:bg-gray-600">
+        <button className="btn mx-2 rounded-full border-none bg-slate-500 dark:bg-gray hover:bg-zinc-600">
           <FaLocationCrosshairs />
           Current Location
         </button>
+        <button
+          className="btn rounded-full  bg-white dark:bg-gray hover:bg-zinc-600"
+          onClick={toggleTheme}
+        >
+          {darkMode ? <MdDarkMode /> : <MdLightMode />}
+        </button>
         {isOpen && (
-          <div className="drawer drawer-end">
+          <div className="drawer drawer-end z-50">
             <input
               id="my-drawer-4"
               type="checkbox"

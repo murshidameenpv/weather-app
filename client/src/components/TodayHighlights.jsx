@@ -9,7 +9,7 @@ import { FaTemperatureQuarter } from "react-icons/fa6";
 const TodayHighlights = () => {
   return (
     <AnimatePresence>
-      <div className="bg-gray rounded-lg py-2 px-3 min-w-0 overflow-hidden shadow-lg backdrop-filter backdrop-blur-lg my-5">
+      <div className="dark:bg-gray bg-slate-500 rounded-lg py-2 px-3 min-w-0 overflow-hidden shadow-lg backdrop-filter backdrop-blur-lg my-5">
         <h2 className="text-sm font-semibold text-left">Today Highlights</h2>
         <div className="mt-4 grid md:grid-cols-2 gap-4 px-3">
           <motion.div
@@ -19,7 +19,7 @@ const TodayHighlights = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 1 }}
             transition={{ ease: "anticipate", duration: "0.3" }}
-            className="bg-darkGray rounded-lg px-2 py-3 backdrop-filter backdrop-blur-lg"
+            className="dark:bg-darkGray rounded-lg px-2 py-3 backdrop-filter backdrop-blur-lg shadow-lg"
           >
             {/* Air Quality Index Card */}
             <div className="flex items-center justify-between">
@@ -29,24 +29,24 @@ const TodayHighlights = () => {
             <div className="flex items-center justify-between gap-5 px-3 py-2">
               <GiWindSlap className="text-2xl" />
               <div className="flex flex-col items-center justify-center">
-                <h4 className="text-white font-semibold">PM25</h4>
-                <span className="text-white font-semibold">600</span>
+                <h4 className="dark:text-white font-semibold">PM25</h4>
+                <span className="dark:text-white font-semibold">600</span>
               </div>
               <div className="flex flex-col items-center justify-center">
-                <h4 className="text-white font-semibold">PM25</h4>
-                <span className="text-white font-semibold">600</span>
+                <h4 className="dark:text-white font-semibold">PM25</h4>
+                <span className="dark:text-white font-semibold">600</span>
               </div>
               <div className="flex flex-col items-center justify-center">
-                <h4 className="text-white font-semibold">S02</h4>
-                <span className="text-white font-semibold">29.5</span>
+                <h4 className="dark:text-white font-semibold">S02</h4>
+                <span className="dark:text-white font-semibold">29.5</span>
               </div>
               <div className="flex flex-col items-center justify-center">
-                <h4 className="text-white font-semibold">NO2</h4>
-                <span className="text-white font-semibold">43.2</span>
+                <h4 className="dark:text-white font-semibold">NO2</h4>
+                <span className="dark:text-white font-semibold">43.2</span>
               </div>
               <div className="flex flex-col items-center justify-center">
-                <h4 className="text-white font-semibold">O2</h4>
-                <span className="text-white font-semibold">0.150</span>
+                <h4 className="dark:text-white font-semibold">O2</h4>
+                <span className="dark:text-white font-semibold">0.150</span>
               </div>
             </div>
           </motion.div>
@@ -57,7 +57,7 @@ const TodayHighlights = () => {
             transition={{ ease: "anticipate", duration: "0.3" }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 1 }}
-            className="bg-darkGray rounded-lg px-2 py-3backdrop-filter backdrop-blur-lg"
+            className="dark:bg-darkGray rounded-lg px-2 py-3backdrop-filter backdrop-blur-lg shadow-lg"
           >
             {/* Sunrise & Sunset Card */}
             <div className="flex items-center justify-start">
@@ -68,14 +68,18 @@ const TodayHighlights = () => {
                 <span>Sunrise</span>
                 <div className="flex items-center justify-between gap-4">
                   <FiSun className="text-5xl" />
-                  <h2 className="text-white text-2xl font-medium">6:00 AM</h2>
+                  <h2 className="dark:text-white text-2xl font-medium">
+                    6:00 AM
+                  </h2>
                 </div>
               </div>
               <div className="flex flex-col items-center justify-between gap-1">
                 <span>Sunset</span>
                 <div className="flex items-center justify-between gap-4">
                   <IoMoonOutline className="text-5xl" />
-                  <h2 className="text-white text-2xl font-medium">6:00 AM</h2>
+                  <h2 className="dark:text-white text-2xl font-medium">
+                    6:00 AM
+                  </h2>
                 </div>
               </div>
             </div>
@@ -88,7 +92,7 @@ const TodayHighlights = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 1 }}
               transition={{ ease: "anticipate", duration: "0.3" }}
-              className="flex-1 bg-darkGray rounded-lg px-2 py-3 shadow-lg"
+              className="flex-1 dark:bg-darkGray rounded-lg px-2 py-3 shadow-lg"
             >
               <span className="text-sm text-white">Humidity</span>
               <div className="flex items-center justify-between space-x-2">
@@ -103,14 +107,18 @@ const TodayHighlights = () => {
               transition={{ ease: "anticipate", duration: "0.3" }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 1 }}
-              className="flex-1 bg-darkGray rounded-lg px-2 py-3 shadow-lg"
+              className="flex-1 dark:bg-darkGray rounded-lg px-2 py-3 shadow-lg"
             >
               <span className="text-sm text-white">Pressure</span>
               <div className="flex items-center justify-between">
                 <LuWaves className="text-2xl" />
                 <div>
-                  <span className="text-xl font-bold text-white">1019</span>
-                  <span className="text-xl font-semibold text-white">hPa</span>
+                  <span className="text-xl font-bold dark:text-white">
+                    1019
+                  </span>
+                  <span className="text-xl font-semibold dark:text-white">
+                    hPa
+                  </span>
                 </div>
               </div>
             </motion.div>
@@ -123,12 +131,14 @@ const TodayHighlights = () => {
               transition={{ ease: "anticipate", duration: "0.3" }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 1 }}
-              className="flex-1 bg-darkGray rounded-lg p-4 shadow-lg"
+              className="flex-1 dark:bg-darkGray rounded-lg p-4 shadow-lg"
             >
-              <span className="text-sm text-white">Humidity</span>
+              <span className="text-sm dark:text-white">Visibility</span>
               <div className="flex items-center justify-between space-x-2">
                 <FaEye className="text-3xl" />
-                <span className="text-xl font-bold text-white">2.51 KM</span>
+                <span className="text-xl font-bold dark:text-white">
+                  2.51 KM
+                </span>
               </div>
             </motion.div>
             <motion.div
@@ -138,12 +148,14 @@ const TodayHighlights = () => {
               transition={{ ease: "anticipate", duration: "0.3" }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 1 }}
-              className="flex-1 bg-darkGray rounded-lg p-4 shadow-lg"
+              className="flex-1 dark:bg-darkGray rounded-lg p-4 shadow-lg"
             >
-              <span className="text-sm text-white">Pressure</span>
+              <span className="text-sm dark:text-white">Pressure</span>
               <div className="flex items-center justify-between">
                 <FaTemperatureQuarter className="text-2xl" />
-                <span className="text-xl font-semibold text-white">20°C</span>
+                <span className="text-xl font-semibold dark:text-white">
+                  20°C
+                </span>
               </div>
             </motion.div>
           </div>

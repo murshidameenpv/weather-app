@@ -14,18 +14,18 @@ const TodayWeather = () => {
 
   return (
     <AnimatePresence>
-      <div className="bg-gray rounded-lg p-4 backdrop-filter backdrop-blur-lg overflow-x-auto">
+      <div className="dark:bg-gray bg-slate-500 rounded-lg p-4 backdrop-filter backdrop-blur-lg overflow-x-auto">
         <div className="flex space-x-4">
           {weatherData.map((data, index) => (
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 1 }}
               key={index}
-              className="flex flex-col items-center min-w-[6rem] bg-zinc-600 rounded-lg px-3 py-2 shadow-lg gap-3"
+              className="flex flex-col items-center min-w-[6rem] dark:bg-gray bg-slate-200 rounded-lg px-3 py-2 shadow-lg gap-3"
             >
               <span className="text-lg font-medium">{data.time}</span>
               <WiDayCloudy className="text-4xl" />
-              <span className="text-xl font-bold text-white">
+              <span className="text-xl font-bold dark:text-white">
                 {data.temperature}°C
               </span>
             </motion.div>
@@ -37,11 +37,11 @@ const TodayWeather = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 1 }}
               key={index}
-              className="flex flex-col items-center min-w-[6rem] bg-zinc-600 rounded-lg px-3 py-2 shadow-lg gap-3"
+              className="flex flex-col items-center min-w-[6rem] dark:bg-gray bg-slate-200 rounded-lg px-3 py-2 shadow-lg gap-3"
             >
               <span className="text-lg font-medium">{data.time}</span>
               <WiStrongWind className="text-2xl" />
-              <span className="text-xl font-bold text-white">
+              <span className="text-xl font-bold dark:text-white">
                 {data.windSpeed} Km/h
               </span>
             </motion.div>
