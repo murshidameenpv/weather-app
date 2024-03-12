@@ -10,10 +10,3 @@ export const generateToken = (id) => {
   return token;
 };
 
-export const setTokenCookie = (res, token) => {
-  res.cookie("access_token", token, {
-    expires: new Date(Date.now() + 24 * 60 * 60 * 1000), // 1 day in milliseconds
-    httpOnly: true,
-    sameSite: "None",
-  });
-};
